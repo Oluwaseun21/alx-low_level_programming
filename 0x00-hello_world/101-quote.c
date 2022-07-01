@@ -2,7 +2,7 @@
 
 /**
  * main - print a string with special characters
- *   
+ *
  * Return: Zero(0) for Success
  */
 int main(void)
