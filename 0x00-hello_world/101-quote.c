@@ -1,12 +1,12 @@
-#include <stdio.h> 
- #include <unistd.h> 
- /** 
-  *   * main - Prints 
-  *    * 
-  *     * Return: Always 1 
-  *      */
-int main(void) 
-	 { 
-	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59); 
-	return (1); 		   
+#include <stdio.h>
+
+/**
+ * main - print a string with special characters
+ *   
+ * Return: Zero(0) for Success
+ */
+int main(void)
+	{
+	printf("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+	return (1);
 }
