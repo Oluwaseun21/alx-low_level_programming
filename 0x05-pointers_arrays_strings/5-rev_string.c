@@ -14,12 +14,14 @@ void rev_string(char *s)
 	int l = 0;
 	char *y = s;
 	int e = 0;
+
 	while (*y != '\0')
 
 	{
 		y++;
 		len++;
 	}
+
 	l = len - 1;
 	for ( ; e < ((l / 2) + 1) ; e++)
 	{
@@ -28,4 +30,4 @@ void rev_string(char *s)
 		s[e] = s[x];
 		s[x] = n;
 	}
-}
+}		
