@@ -10,7 +10,6 @@ int _atoi(char *s)
 	unsigned int num = 0;
 
 	do
-       
 	{
 		if
 			(*s == '-')
@@ -24,5 +23,5 @@ int _atoi(char *s)
 	} while
 	(*s++);
 	return
-		(num *sign);
+		(num * sign);
 }
