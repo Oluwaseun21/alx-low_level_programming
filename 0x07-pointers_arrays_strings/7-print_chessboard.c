@@ -1,32 +1,23 @@
+/*
+ * File: 7-print_chessboard.c
+ * Auth: Seun
+ * Task: writing a function that prints the chessboard.
+ */
+
 #include "main.h"
 
 /**
- * _strpbrk - search a string for any of a set of bytes
- * @s: source string
- * @accept: accepted characters
- * Return: the string since the first found accepted character
+ * print_chessboard - Prints a chessboard.
+ * @a: The chessboard to be printed.
  */
-char *_strpbrk(char *s, char *accept)
+void print_chessboard(char (*a)[8])
 {
-		int a = 0, b;
+	int i, j;
 
-			while (s[a])
-					{
-								b = 0;
-
-										while (accept[b])
-													{
-																	if (s[a] == accept[b])
-																					{
-																										s += a;
-																														return (s);
-																																	}
-
-																				b++;
-																						}
-
-												a++;
-													}
-
-				return ('\0');
+	for (i = 0; i < 8; i++)
+{
+	for (j = 0; j < 8; j++)
+	_putchar(a[i][j]);
+	_putchar('\n');
+}
 }
