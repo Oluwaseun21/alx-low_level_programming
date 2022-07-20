@@ -5,8 +5,8 @@
 
 #include "main.h"
 
- int find_sqrt(int i, int r);
- int _sqrt_recursion(int n);
+int find_sqrt(int i, int r);
+int _sqrt_recursion(int n);
 
  /**
   * find_sqrt - Finds the natural square root of an inputted number.
