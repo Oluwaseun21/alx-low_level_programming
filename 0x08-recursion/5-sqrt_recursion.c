@@ -1,44 +1,48 @@
-#include "main.h" 
-/** 
-* find_sqr - returns the square root 
-* @n: given number 
-* @i: iterator 
-* 
-* Return: square root of n or -1 
-*/ 
+/*
+ * File: 5-sqrt_recursion.c
+ * Task: Writinh a function that returns the natural square root of a number.
+ */
 
-int find_sqr(int i, int n)
-{
-	if (n == 0 || n == 1)
-{
-	return (n);
-}
-	else if ((i * i) < n)
-{
-	return (find_sqr(i + 1, n));
-}
-	else if ((i * i) == n)
-{
-return (i);
-}
-	return (-1);
-}
-/** 
-* _sqrt_recursion - returns the natural square root of a number 
-* @n: number given 
-* 
-* Return: squeare root of n 
-*/ 
-int _sqrt_recursion(int n)
-{
-	int i = 0;
+#include "main.h"
 
-	if (i < 0)
+int find_sqrt(int i, int r);
+int _sqrt_recursion(int n);
+
+/**
+ * find_sqrt - Finds the natural square root of an inputted number.
+ * @i: The number to find the square root of.
+ * @r: The root to be tested.
+ *
+ * Return: If the number has a natural square root - the square root.
+ *         If the number does not have a natural square root - -1.
+ */
+int find_sqrt(int i, int r)
 {
-	return (-1);
+	if ((r * r) == i)
+		return (r);
+
+	if (r == i / 2)
+		return (-1);
+
+	return (find_sqrt(i, r + 1));
 }
-	else
+
+/**
+ * _sqrt_recursion - Returns the natural square root of a number.
+ * @n: The number to return the square root of.
+ *
+ * Return: If n has a natural square root - the natural square root of n.
+ *         If n does not have a natural square root - -1.
+ */
+int _sqrt_recursion(int n)
 {
-	return (find_sqr(i, n));
-}
+	int root = 0;
+
+	if (n < 0)
+		return (-1);
+
+	if (n == 1)
+		return (1);
+
+	return (find_sqrt(n, root));
 }
