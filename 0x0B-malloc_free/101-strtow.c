@@ -45,10 +45,10 @@ char **strtow(char *str)
 {
 	if (str[c] == ' ')
 	a1++;
-	if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
+if (str[c] != ' ' && (str[c + 1] == ' ' || str[c + 1] == '\0'))
 {
-	s[i] = malloc((c - a1 + 2) * sizeof(char));
-	if (s[i] == NULL)
+s[i] = malloc((c - a1 + 2) * sizeof(char));
+if (s[i] == NULL)
 {
 ch_free_grid(s, i);
 	return (NULL);
