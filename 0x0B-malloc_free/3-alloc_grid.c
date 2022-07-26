@@ -7,35 +7,30 @@
  * @height: height of the grid
  * Return: pointer of an array of integers on success and NULL otherwise
  */
-
 int **alloc_grid(int width, int height)
 {
-	int **G, i, j;
-
-	if (width < 1 || height < 1)
-{
-	return (NULL);
+	int **mee;
+	int x, y;
+	if (width <= 0 || height <= 0)
+		return (NULL);
+	mee = malloc(sizeof(int *) * height);
+	if (mee == NULL)
+		return (NULL);
+	for (x = 0; x < height; x++)
+	{
+		mee[x] = malloc(sizeof(int) * width);
+		if (mee[x] == NULL)
+		{
+			for (; x >= 0; x--)
+				free(mee[x]);
+			free(mee);
+			return (NULL);
+		}
+	}
+	for (x = 0; x < height; x++)
+	{
+		for (y = 0; y < width; y++)
+			mee[x][y] = 0;
+	}
+	return (mee);
 }
-	G = malloc(sizeof(int *) * height);
-	if (G == NULL)
-{
-	return (NULL);
-}
-	for (i = 0; i < height; i++)
-{
-	G[i] = malloc(sizeof(int) * width);
-	if (G[i] == NULL)
-{
-	for (; i >= 0; i--)
-{
-	free(G[i]);
-}
-	free(G);
-	return (NULL);
-}
-	for (j = 0; j <= width; j++)
-{
-G[i][j] = 0;
-}
-}
-	return (G);
