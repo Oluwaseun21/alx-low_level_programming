@@ -1,21 +1,3 @@
-
-Amili-usain
-/
-alx-low_level_programming
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-alx-low_level_programming/0x12-singly_linked_lists/2-add_node.c
-@Amili-usain
-Amili-usain task 2
- 1 contributor
-Executable File  38 lines (32 sloc)  662 Bytes
 #include "lists.h"
 
 /**
